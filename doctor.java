@@ -1,32 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.tarea.m2;
+import Helpers.Persona;
 
 /**
  *
- * @author elmat
+ * @author PC
  */
-public class doctor extends Persona 
-{
+public class Doctor extends Persona {
+    // Atributos adicionales específicos de Doctor
     private String especialidad;
-    public String getEspecialidad() 
-    {
+    
+    public Doctor(String nombre, int edad, String genero, String especialidad) {
+        super(nombre, edad, genero);
+        this.especialidad = especialidad;
+    }
+    
+    // Método específico de Doctor para obtener su especialidad
+    public String getEspecialidad() {
         return especialidad;
     }
-
+    
+    // Método específico de Doctor para establecer su especialidad
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-
-    public void mostrarInformacionDoctor() 
-    {
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Número de ID: " + getNumId());
-        System.out.println("Edad: " + getEdad() + " años");
-        System.out.println("Especialidad: " + especialidad);
-    }
-
 }
-
